@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assest/css/gallery.css">
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg px-5 fixed-top" style="background-color: white;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" data-aos="fade-down"><img src="./assest/images/logo/This is logo.png" alt="logo" class="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto gap-3">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#work">Work</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<section class="gallery-section">
+    <div class="container">
+        <div class="row g-4 align-items-center text-center">
+
+            <!-- Image 1 -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="gallery-card">
+                    <img src="./assest/images/gallery/image 3 (1).jpeg"
+                         class="gallery-img" alt="">
+                </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="gallery-card">
+                    <img src="./assest/images/gallery/WhatsApp Image 2026-02-07 at 4.53.28 AM.jpeg"
+                         class="gallery-img" alt="" style="background-position: center;">
+                </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+                         class="gallery-img" alt="">
+                </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+                         class="gallery-img" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<script>
+
+const card = document.getElementById("tiltCard");
+
+card.addEventListener("mousemove", (e) => {
+  const rect = card.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  const centerX = rect.width / 2;
+  const centerY = rect.height / 2;
+
+  const rotateX = ((y - centerY) / 20);
+  const rotateY = ((centerX - x) / 20);
+
+  card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+});
+
+card.addEventListener("mouseleave", () => {
+  card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+});
+
+</script>
+
+
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row text-center text-md-start">
+
+            <!-- About -->
+            <div class="col-md-4 mb-4">
+                <h5>Mr Aftab</h5>
+                <p class="text-secondary">
+                    Frontend Developer creating modern and responsive web designs.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div class="col-md-4 mb-4">
+                <h5>Follow Me</h5>
+                <div class="social-icons mt-4">
+                <a href="#"><i class="fab fa-facebook-f"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5v1.8H17L16.6 15h-2.9v7A10 10 0 0 0 22 12z"/>
+</svg>
+</i></a>
+                <a href="#"><i class="fab fa-github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M7.5 2C4.5 2 2 4.5 2 7.5v9C2 19.5 4.5 22 7.5 22h9c3 0 5.5-2.5 5.5-5.5v-9C22 4.5 19.5 2 16.5 2h-9zm0 2h9C18.4 4 20 5.6 20 7.5v9c0 1.9-1.6 3.5-3.5 3.5h-9C5.6 20 4 18.4 4 16.5v-9C4 5.6 5.6 4 7.5 4zm4.5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.8-2.8a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/>
+</svg>
+</i></a>
+                <a href="#"><i class="fab fa-twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.9 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1-1-1.3-1-1.3-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.5 2.3 1 2.9.8.1-.7.3-1 .6-1.3-2.2-.2-4.6-1.1-4.6-5 0-1.1.4-2 .9-2.7-.1-.2-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 0 1 4.9 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.4.1 2.6.6.7.9 1.6.9 2.7 0 3.9-2.4 4.8-4.7 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0 0 22 12c0-5.5-4.5-10-10-10z"/>
+</svg>
+</i></a>
+                <a href="#"><i class="fab fa-linkedin-in"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7 0h3.6v2.2h.1c.5-.9 1.8-2.2 3.7-2.2 4 0 4.7 2.6 4.7 6v10h-4v-8.9c0-2.1 0-4.9-3-4.9s-3.4 2.3-3.4 4.7V24h-4V8z"/>
+</svg>
+</i></a>
+            </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            © 2026 All Rights Reserved | Design with ❤️ by Aftab
+        </div>
+    </div>
+</footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+  AOS.init();
+</script>
+</body>
+</html>
