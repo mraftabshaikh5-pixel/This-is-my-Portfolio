@@ -1,3 +1,7 @@
+body{
+    background:#000;
+}
+
 .navbar-brand .logo{
 
     height: 5vh;
@@ -18,74 +22,53 @@
 
 }
 
-
-
-
-
+/* SECTION */
 .gallery-section{
     padding:100px 0;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
+/* MASONRY GRID */
+.gallery-grid{
+    column-count:3;
+    column-gap:25px;
 }
 
-.section-title h2{
-    font-weight:700;
-}
-
-.section-title p{
-    color:#666;
-}
-
-/* GALLERY CARD */
-.gallery-section{
-    padding:100px 0;
-}
-
-/* Gallery Card */
+/* CARD */
 .gallery-card{
+    margin-bottom:25px;
+    border-radius:18px;
     overflow:hidden;
-    border-radius:20px;
+    position:relative;
     cursor:pointer;
-    transition:0.4s ease;
-    box-shadow:0 10px 30px rgba(0,0,0,0.05);
-    display: inline;
 }
 
-.gallery-img{
-    width:50%;
+/* IMAGE */
+.gallery-card img{
+    width:100%;
     height:auto;
-    object-fit:contain;
-    border-radius: 25px;
-    box-shadow: 10px 10px 10px;
+    display:block;
+    border-radius:18px;
+    transition:0.6s ease;
 }
 
-/* Hover Effect */
-.gallery-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 50px rgba(0,0,0,0.1);
-}
-
-.gallery-card:hover .gallery-img{
+/* HOVER */
+.gallery-card:hover img{
     transform:scale(1.08);
 }
 
 /* Responsive */
-@media(max-width:768px){
-    .gallery-img{
-        height:250px;
+
+@media(max-width:992px){
+    .gallery-grid{
+        column-count:2;
     }
 }
 
-
-
-
-
-
-
-
+@media(max-width:600px){
+    .gallery-grid{
+        column-count:1;
+    }
+}
 
 
 .footer{
