@@ -92,6 +92,12 @@
     transform:translateY(-5px);
 }
 
+.skill-box img{
+
+    height: 50%;
+    width: 50%;
+}
+
 
 .experience{
     background:#0d0d0d;
