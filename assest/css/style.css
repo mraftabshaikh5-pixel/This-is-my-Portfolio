@@ -19,7 +19,7 @@
 }
 
 .hero{
-    padding:80px 0;
+    padding-top: 80px 0;
 }
 
 .hero h1{
@@ -32,26 +32,13 @@
     
 }
 
-
-.front-img-card{
-
-    perspective:1000px;
-
-}
-.front-img-inner{
-    position:relative;
-    border-radius:25px;
-    overflow:hidden;
-    transition:transform 0.2s ease;
     
-}
 
 .hero img{
 
     width: 50%;
-    height:auto;
+    height:500px;
     object-fit:cover;
-    border-radius:25px;
 
 }
 
@@ -218,43 +205,45 @@
 }
 
 /* IMAGE CARD */
-.image-card{
+/* .image-card{
     perspective:1000px;
 }
 
 .image-inner{
-    position:relative;
+    /* /* position:relative;
     border-radius:25px;
     overflow:hidden;
     transition:transform 0.2s ease;
-    box-shadow:0 20px 50px rgba(0,0,0,0.2);
+    box-shadow:0 20px 50px rgba(0,0,0,0.2); */
 }
 
 
 .about-section{
     padding:100px 0;
-    background:#f8f9fa;
+    
 }
 
-/* IMAGE CARD */
 .about-img-wrapper{
     position:relative;
-    border-radius:20px;
+    border: none;
     overflow:hidden;
-    transition:0.5s ease;
+    transition:transform 0.2s ease;
+    text-align: center;
+  
+
 }
 
 .about-img{
-    width:100%;
-    height:450px;
+    width:80%;
+    height:380px;
     object-fit:contain;
-    transition:0.6s ease;
+    /* transition:0.6s ease; */
 }
 
 /* Hover Effect */
 .about-img-wrapper:hover{
     transform:translateY(-10px);
-    box-shadow:0 20px 50px rgba(0,0,0,0.15);
+    /* box-shadow:0 20px 50px rgba(0,0,0,0.15); */
 }
 
 .about-img-wrapper:hover .about-img{
