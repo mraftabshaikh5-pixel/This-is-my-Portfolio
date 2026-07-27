@@ -1,0 +1,166 @@
+
+
+
+.navbar-brand .logo{
+
+    height: 5vh;
+    width: 5vw;
+
+}
+
+.navbar .navbar-nav .nav-item .nav-link{
+
+    font-weight: bolder;
+}
+.navbar .navbar-nav .nav-item .nav-link:hover{
+
+    color:chocolate;
+    text-decoration-line: underline;
+    text-underline-offset: 8px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Gallery */
+
+#gallery{
+  
+  background-color: #0b1120;
+}
+
+.gallery-box{
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 10px;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+.gallery-box img{
+    width: 100%;
+    height: auto;      /* Auto height */
+    display: block;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform .6s ease, filter .4s ease;
+}
+
+.gallery-box:hover img{
+    transform: scale(1.08) rotate(1deg);
+    filter: brightness(1.08);
+}
+
+.gallery-box:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.25);
+}
+
+/* Popup */
+
+#popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(8px);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    animation:fade .3s;
+}
+
+#popup img{
+    max-width: 90%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255,255,255,.2);
+}
+
+#closeBtn{
+    position:absolute;
+    top:20px;
+    right:35px;
+    color:white;
+    font-size:45px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#closeBtn:hover{
+    transform:rotate(180deg);
+    color:#ffc107;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+
+
+
+
+
+
+
+
+.footer{
+    background:#0d0d0d;
+    color:#fff;
+    padding:40px 0;
+}
+
+.footer-bottom{
+    border-top:1px solid #222;
+    margin-top:25px;
+    padding-top:15px;
+    font-size:14px;
+    text-align:center;
+    color:#aaa;
+}
+
+
+.footer .list-unstyled li a{
+    color: #aaa;
+    text-decoration:none;
+    transition:0.3s;
+    align-items: center;
+}
+
+.footer .list-unstyled li a:hover{
+
+    color: chocolate;
+
+
+}
